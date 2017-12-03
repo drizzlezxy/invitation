@@ -1,9 +1,3 @@
-/*!
- * zepto.fullpage.js v0.5.0 (https://github.com/yanhaijing/zepto.fullpage)
- * API https://github.com/yanhaijing/zepto.fullpage/blob/master/doc/api.md
- * Copyright 2014 yanhaijing. All Rights Reserved
- * Licensed under MIT (https://github.com/yanhaijing/zepto.fullpage/blob/master/LICENSE)
- */
 (function($, window, undefined) {
     if (typeof $ === 'undefined') {
         throw new Error('zepto.fullpage\'s script requires Zepto');

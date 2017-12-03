@@ -20,7 +20,7 @@ window.onload = () => {
   const list2html = (list) => {
     let html = '';
     list.map(({n, t}) => {
-      html += `<li class="guest-line"><span class="line-name">${n}</span><span class="line-table-num">第${t}桌</span></li>`;
+      html += `<li class="guest-line"><span class="line-name">${n}</span><span class="line-table-num">${t}</span></li>`;
     })
     if(html.trim() === '') {
       html = `<li class="guest-line"><span class="line-name">无</span></li>`;

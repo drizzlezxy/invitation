@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no"/>
+  <meta charset="utf-8">
+  <title>虞俞联姻</title>
+  <style>
+    * { padding:0; margin:0; box-sizing: border-box; }
+    html, body, .page { width: 100vw; height: 100vh; background: #f4b59c; font-size: 16px; line-height: 12.8vw; }
+    ul { list-style-type: none; }
+
+    .wp{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;            
+    }
+    .fullPage-wp{   
+      -webkit-transform: translate3d(0,0,0);     
+      transform: translate3d(0,0,0);     
+    }
+    .fullPage-wp:after {
+      display: block;
+      content: ' ';
+      height: 0;
+      clear: both;
+    }
+    .fullPage-wp.anim{
+      -webkit-transition: all 500ms ease-out 0s;
+      transition: all 500ms ease-out 0s; 
+    }
+    .fullPage-page{
+      display: block;
+      overflow: hidden;
+    }
+
+    .fullPage-dir-h {
+      float: left;
+    }
+
+    .page1 {
+      background-image:url('http://tubobo-qd.oss-cn-shanghai.aliyuncs.com/invitation/Cover%402x.png');
+      background-size: 100%;
+      background-repeat:no-repeat;
+    }
+
+    .page2 {
+      background-image:url('http://tubobo-qd.oss-cn-shanghai.aliyuncs.com/invitation/Background%402x.png');
+      background-size: 100%;
+      background-repeat:no-repeat;
+    }
+    .contain .container {
+      padding: 16.8vw 6.4vw 0;
+      height: 152.8vw;
+    }
+    .search {
+      height: 28.5vw;
+      padding: 13.1vw 2.7vw 2.6vw;
+      position: relative;
+    }
+    .search input[type="text"]{
+      display: inline-block;
+      font-size: 16px;
+      line-height: 12.8vw;
+      padding-left: 3vw;
+      border: 0;
+      background: #F7F0DC;
+      width: 32vw;
+      border-radius: 0;
+    }
+    .search .button {
+      position: absolute;
+      top: 13.1vw;
+      display: inline-block;
+      padding: 0 3vw;
+      color: #fff;
+    }
+    .button.search-button {
+      background: #E99679;
+      left: 32vw;
+    }
+    .button.table-button {
+      background: #DBB56A;
+      right: 2.7vw;
+    }
+    .line {
+      margin: 0 5.3vw;
+      border-top: 1px solid #F7F0DC; 
+    }
+
+    #guest-list {
+      margin-top: 2.6vw;
+      width: 100%;
+      max-height: 100vw;
+      overflow: scroll;
+      -webkit-overflow-scrolling : touch;
+    }
+    #guest-list .guest-line {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+    }
+    #guest-list .guest-line>span {
+      display: inline-block;
+      overflow: hidden;
+    }
+    #guest-list .guest-line>span.line-name {
+      width: 50%;
+      text-align: right;
+      margin-right: 5vw;
+    }
+    #guest-list .guest-line>span.line-table-num {
+    }
+  </style>
+</head>
+<body>
+  <div class="wp">
+    <div class="wp-inner">
+
+      <div class="page page1">
+        <div class="contain"></div>
+      </div>
+
+      <div class="page page2">
+        <div class="contain">
+          <div class="container">
+            <div class="search"><input type="text" id="search-input" placeholder="请输入姓名" /><div id="search-button" class="button search-button">搜索座位</div><div id="table-button" class="button table-button">查看桌号</div>
+            </div><div class="line"></div>
+            <ul id="guest-list"></ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script src="zepto.fullpage.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
