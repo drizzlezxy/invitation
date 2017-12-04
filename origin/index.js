@@ -2,10 +2,12 @@ var guestList = [{"n":"毛有丰","t":"61"},{"n":"宋鱼水","t":"92"},{"n":"曾
 
 window.onload = () => {
   $('.wp-inner').fullpage({
+    start: (sessionStorage && sessionStorage.setItem && sessionStorage.getItem('indexPage') === '1') ? 1 : 0,
     beforeChange: (e) => {
       if (e.next === 1) {
         $.fn.fullpage.stop();
         $.fn.fullpage.unholdTouch();
+        sessionStorage && sessionStorage.setItem && sessionStorage.setItem('indexPage', '1');
       }
     }
   });
@@ -14,7 +16,7 @@ window.onload = () => {
   const inputELE = document.getElementById('search-input');
   const searchBTN = document.getElementById('search-button');
   const tableBTN = document.getElementById('table-button');
-  let searchValue = '';
+  let searchValue = inputELE.value || '';
 
   // 添加列表
   const list2html = (list) => {
