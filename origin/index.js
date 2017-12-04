@@ -2,7 +2,7 @@ var guestList = [{"n":"毛有丰","t":"61"},{"n":"宋鱼水","t":"92"},{"n":"曾
 
 window.onload = () => {
   $('.wp-inner').fullpage({
-    start: (sessionStorage && sessionStorage.setItem && sessionStorage.getItem('indexPage') === '1') ? 1 : 0,
+    start: (sessionStorage && sessionStorage.getItem && sessionStorage.getItem('indexPage') === '1') ? 1 : 0,
     beforeChange: (e) => {
       if (e.next === 1) {
         $.fn.fullpage.stop();
